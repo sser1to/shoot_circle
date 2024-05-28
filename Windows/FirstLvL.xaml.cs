@@ -38,10 +38,10 @@ namespace ShootCircle.Windows
             moveTimer.Tick += MoveTimer_Tick; // Обработчик события тика таймера
             moveTimer.Start(); // Запускаем таймер
 
-            PlayWavFilesAsync();
+            // PlayWavFilesAsync();
         }
 
-        public async Task PlayWavFilesAsync()
+        /*public async Task PlayWavFilesAsync()
         {
             string folderPath = "Music";
             string[] files = Directory.GetFiles(folderPath, "*.wav");
@@ -56,7 +56,7 @@ namespace ShootCircle.Windows
                     }
                 }
             }
-        }
+        }*/
 
         private void MoveTimer_Tick(object sender, EventArgs e)
         {
