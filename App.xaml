@@ -1,0 +1,52 @@
+﻿<Application x:Class="ShootCircle.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ShootCircle"
+             StartupUri="Windows/MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="Btn1">
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontFamily" Value="Segoe Print"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" CornerRadius="10" Background="White" BorderBrush="Black" BorderThickness="2" Padding="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FFEFEEEE"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="{x:Type Label}" x:Key="Lb1">
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontFamily" Value="Segoe Print"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="{x:Type Border}" x:Key="Bord1">
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="2"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Ellipse}" x:Key="Ell1">
+            <Setter Property="Fill" Value="Blue"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Ellipse}" x:Key="Ell2">
+            <Setter Property="Fill" Value="Red"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Ellipse}" x:Key="Ell3">
+            <Setter Property="Fill" Value="LightGreen"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>
